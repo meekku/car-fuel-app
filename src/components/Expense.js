@@ -1,10 +1,11 @@
-import React from "react";
-
+import React, {useContext} from "react";
+import { GlobalContext } from "../context/GlobalState";
 export const Expense = ({ expense }) => {
-    const sign = expense.amount < 0 ? '-' : '+';
+    const { deleteExpense } = useContext(GlobalContext);
+
     return (
         <li className="minus">
-            {expense.text} <span>{sign}${Math.abs(expense.amount)}</span><button className="delete-btn">x</button>
+            {expense.text} <span>${Math.abs(expense.amount)}</span><button onClick={() => deleteExpense(expense.id)} className="delete-btn">x</button>
         </li> 
     )
 }
