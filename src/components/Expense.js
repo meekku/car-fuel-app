@@ -5,7 +5,7 @@ export const Expense = ({ expense }) => {
 
     return (
         <li className="minus">
-            {expense.text} <span>${Math.abs(expense.amount)}</span><button onClick={() => deleteExpense(expense.id)} className="delete-btn">x</button>
+            {expense.text} <span>${Math.abs(expense.price)}</span><button onClick={() => deleteExpense(expense.id)} className="delete-btn">x</button>
         </li> 
     )
 }
