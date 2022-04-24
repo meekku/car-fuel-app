@@ -4,11 +4,13 @@ import { AllCars } from './components/AllCars'
 import { AllCarExpenses } from './components/AllCarExpenses';
 import { ExpenseList } from './components/ExpenseList';
 import { AddExpense } from './components/AddExpense';
+import { GlobalProvider } from './context/GlobalState';
+
 import './App.css';
 
 function App() {
   return (
-    <div>
+    <GlobalProvider>
         <Header />
         <div className = "container">
           <AllCars />
@@ -16,7 +18,7 @@ function App() {
           <ExpenseList />
           <AddExpense />
         </div>
-    </div>
+    </GlobalProvider>
   );
 }
 
