@@ -5,13 +5,11 @@ import { Expense } from './Expense';
 export const ExpenseList = () => {
     const { expenses } = useContext(GlobalContext);
    
-
     return (
         <>
             <h3>Refueling History</h3>
             <ul className="list">
-                {expenses.map(expenses => (<Expense key={expenses.id} expenses={expenses} />))}
-                
+                {expenses.map(expense => (<Expense key={expense.id} expense={expense} />))}
             </ul>
         </>
     )

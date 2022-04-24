@@ -1,9 +1,10 @@
 import React from "react";
 
-export const Expense = ({ expenses }) => {
+export const Expense = ({ expense }) => {
+    const sign = expense.amount < 0 ? '-' : '+';
     return (
         <li className="minus">
-            {expenses.text} <span>-$400</span><button className="delete-btn">x</button>
+            {expense.text} <span>{sign}${Math.abs(expense.amount)}</span><button className="delete-btn">x</button>
         </li> 
     )
 }
