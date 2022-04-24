@@ -5,6 +5,7 @@ export const AddExpense = () => {
     const [text, setText] = useState('');
     const [price, setPrice] = useState('');
     const [liters, setLiters] = useState('');
+    const [distance, setDistance] = useState('');
 
     const { addExpense } = useContext(GlobalContext);
 
@@ -15,7 +16,8 @@ export const AddExpense = () => {
             id: Math.floor(Math.random() * 100000000),
             text,
             price: Math.abs(+price),
-            liters: Math.abs(+liters)
+            liters: Math.abs(+liters),
+            distance: Math.abs(+distance)
         }
 
         addExpense(newExpense);
@@ -45,6 +47,12 @@ export const AddExpense = () => {
                 <input type="number" value={liters} onChange={(e) => setLiters(e.target.value)}placeholder="Enter amount..." />
             </div>
 
+            <div className="form-control">
+                <label htmlFor="distance">
+                    Distance in kilometers
+                </label>
+                <input type="number" value={distance} onChange={(e) => setDistance(e.target.value)}placeholder="Enter amount..." />
+            </div>
 
             <button className="btn">Add expense</button>
         </form>

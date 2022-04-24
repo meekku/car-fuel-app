@@ -10,7 +10,7 @@ export const AllCarExpenses = () => {
     return (
         <div className ="inc-exp-container">
             <div>
-                <h4>Tätä muokataan jotenki et saadaa esim yhen auton tiedot tai jtn entiiä </h4>
+                <h4>Tää varmaan poistetaan mut onnyt tässä silti </h4>
                 <p className="money minus">${priceTotal}</p>
             </div>
         </div>
